@@ -77,7 +77,6 @@ module HQ::GraphQL
         to_s.sub(/^((::)?\w+)::/, "")
       end
 
-
       # This override method allow us to keep the suffix `-Type`
       # if we don't specify the `graphql_name`.
       def default_graphql_name
@@ -86,6 +85,5 @@ module HQ::GraphQL
     end
   end
 end
-
 
 ::GraphQL::Schema::Enum.extend ::HQ::GraphQL::Ext::EnumExtensions
